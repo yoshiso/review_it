@@ -1,0 +1,26 @@
+= vendor-prefix($name, $argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}
+
+body
+  margin: 0
+  background: #181818
+  text-align: center
+  border-top: 5px solid #76cc1e 
+
+h1
+  margin: 0
+  padding: 10px
+  color: #fafafa
+  font-size: 20px
+  font-family: 'Helvetica'
+  font-weight: 100
+
+.video-frame
+  +vendor-prefix(box-shadow, 1px 1px 25px 1px #333)
+  +vendor-prefix(opacity,0)
+.from
+  color: #eee
