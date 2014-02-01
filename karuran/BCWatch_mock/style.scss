@@ -1,0 +1,213 @@
+body {
+
+  $main-color: desaturate(#25b89a, 10%);
+  $accent-color: adjust-hue($main-color, 200);
+  $base-color: #fff;
+  $bg-color: #fbfbfb;
+  $text-color: #333;
+  $border-color: #ddd;
+  $content-width: 600px;
+
+  color: $text-color;
+  background: $bg-color;
+  font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+
+  .clearfix {
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+
+  //[todo] - col-right 以外を固定幅にする
+  .container {
+    .col-left, .col-middle, .col-right {
+      position: absolute;
+      top: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+    }
+
+    .inner-left, .inner-middle, .inner-right {
+      height: 100%;
+
+      .left-top, .middle-top, .right-top {
+        // [todo] - position を fixed にする
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-bottom: 1px solid #a9adb2;
+        background: linear-gradient(to bottom, #f3f3f3 0%, #d7d7d7 100%);
+        .top-elm {
+          border-top: 1px solid #fff;
+        }
+      }
+      .left-top, .middle-top {
+        border-right: 1px solid #a9adb2;
+      }
+    }
+    .inner-left, .inner-middle {
+      border-right: 1px solid #a9adb2;
+
+      .top-inner {
+        border-right: 1px solid #a9adb2;
+      }
+    }
+
+    $col-left-width: 15%;
+    $col-middle-width: 34%;
+    $col-right-width: 51%;
+
+    .col-left {
+      width: $col-left-width;
+      left: 0;
+      background: #e0e5ea;
+
+      .inner-left {
+        .left-top {
+          left: 0;
+        }
+        .nav-menu {
+          padding-top: 31px;
+          .nav-item {
+            cursor: pointer;
+            padding: 2px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+          }
+          .nav-separate {
+            margin-top: 20px;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .col-middle {
+      width: $col-middle-width;
+      left: $col-left-width;
+      background: #f9f9f9;
+
+      .middle-top {
+        .search-title {
+          width: 85%;
+          border-radius: 10px;
+          border: 1px solid #999;
+          font-size: 12px;
+          height: 20px;
+          padding: 0 10px;
+          box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+          position: relative;
+          top: -3px;
+
+          &:focus {
+            outline: 0;
+            border: 1px solid #0992ca;
+            box-shadow: 0 0 4px #0992ca;
+          }
+        }
+      }
+
+      .feed {
+        padding-top: 31px;
+        .feed-item {
+          padding: 10px 30px 10px 5px;
+          border-bottom: 1px solid #ccc;
+
+          .feed-item-title {
+            font-weight: normal;
+            font-size: 14px;
+            background-repeat: no-repeat;
+            padding-left: 23px;
+            background-position: 0 1px;
+          }
+        }
+      }
+    }
+
+    .col-right {
+      width: $col-right-width;
+      left: $col-left-width + $col-middle-width;
+
+      .inner-right {
+        .right-top {
+
+          .top-elm {
+
+            .item-title {
+              font-size: 12px;
+              text-align: start;
+              padding-left: 2%;
+              .item-title-favicon {
+                position: relative;
+                top: 3px;
+                left: 0;
+                padding-right: 6px;
+              }
+            }
+          }
+        }
+        .comment-set-outer {
+          padding-top: 31px;
+          .comment-set-title-outer {
+            height: 20px;
+            background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 100%);
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #cfcfcf;
+            .comment-set-title {
+              font-size: 13px;
+              color: #777;
+              padding-left: 10px;
+              border-top: 1px solid #fbfbfb;
+            }
+          }
+          .comment-list {
+
+            .comment {
+              border-top: 1px solid #ccc;
+              padding: 10px 0;
+
+              &:first-child {
+                border: none;
+              }
+
+              .comment-inner {
+                padding: 0 10px;
+
+                .comment-icon {
+                  float: left;
+                  width: 32px;
+                  height: 32px;
+                  padding-top: 2px;
+                }
+                .comment-group {
+                  padding-left: 42px;
+
+                  .comment-name, .comment-id {
+                    font-size: 13px;
+                  }
+                  .comment-name {
+                    display: inline;
+                    margin-right: 5px;
+                  }
+                  .comment-id {
+                    color: #777;
+                  }
+                  .comment-body {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

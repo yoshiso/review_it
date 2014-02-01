@@ -100,4 +100,3 @@ class Rem < Sinatra::Base
     {status:500,version:1,errors:[env['sinatra.error'].name]}.to_json
   end
 end
-

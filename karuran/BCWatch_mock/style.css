@@ -1,0 +1,127 @@
+@charset "UTF-8";
+body {
+  color: #333333;
+  background: #fbfbfb;
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif; }
+  body .clearfix:after {
+    content: "";
+    clear: both;
+    display: block; }
+  body .container .col-left, body .container .col-middle, body .container .col-right {
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%; }
+  body .container .inner-left, body .container .inner-middle, body .container .inner-right {
+    height: 100%; }
+    body .container .inner-left .left-top, body .container .inner-left .middle-top, body .container .inner-left .right-top, body .container .inner-middle .left-top, body .container .inner-middle .middle-top, body .container .inner-middle .right-top, body .container .inner-right .left-top, body .container .inner-right .middle-top, body .container .inner-right .right-top {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-bottom: 1px solid #a9adb2;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #d7d7d7 100%); }
+      body .container .inner-left .left-top .top-elm, body .container .inner-left .middle-top .top-elm, body .container .inner-left .right-top .top-elm, body .container .inner-middle .left-top .top-elm, body .container .inner-middle .middle-top .top-elm, body .container .inner-middle .right-top .top-elm, body .container .inner-right .left-top .top-elm, body .container .inner-right .middle-top .top-elm, body .container .inner-right .right-top .top-elm {
+        border-top: 1px solid #fff; }
+    body .container .inner-left .left-top, body .container .inner-left .middle-top, body .container .inner-middle .left-top, body .container .inner-middle .middle-top, body .container .inner-right .left-top, body .container .inner-right .middle-top {
+      border-right: 1px solid #a9adb2; }
+  body .container .inner-left, body .container .inner-middle {
+    border-right: 1px solid #a9adb2; }
+    body .container .inner-left .top-inner, body .container .inner-middle .top-inner {
+      border-right: 1px solid #a9adb2; }
+  body .container .col-left {
+    width: 15%;
+    left: 0;
+    background: #e0e5ea; }
+    body .container .col-left .inner-left .left-top {
+      left: 0; }
+    body .container .col-left .inner-left .nav-menu {
+      padding-top: 31px; }
+      body .container .col-left .inner-left .nav-menu .nav-item {
+        cursor: pointer;
+        padding: 2px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #555; }
+      body .container .col-left .inner-left .nav-menu .nav-separate {
+        margin-top: 20px;
+        padding-left: 5px; }
+  body .container .col-middle {
+    width: 34%;
+    left: 15%;
+    background: #f9f9f9; }
+    body .container .col-middle .middle-top .search-title {
+      width: 85%;
+      border-radius: 10px;
+      border: 1px solid #999;
+      font-size: 12px;
+      height: 20px;
+      padding: 0 10px;
+      box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: -3px; }
+      body .container .col-middle .middle-top .search-title:focus {
+        outline: 0;
+        border: 1px solid #0992ca;
+        box-shadow: 0 0 4px #0992ca; }
+    body .container .col-middle .feed {
+      padding-top: 31px; }
+      body .container .col-middle .feed .feed-item {
+        padding: 10px 30px 10px 5px;
+        border-bottom: 1px solid #ccc; }
+        body .container .col-middle .feed .feed-item .feed-item-title {
+          font-weight: normal;
+          font-size: 14px;
+          background-repeat: no-repeat;
+          padding-left: 23px;
+          background-position: 0 1px; }
+  body .container .col-right {
+    width: 51%;
+    left: 49%; }
+    body .container .col-right .inner-right .right-top .top-elm .item-title {
+      font-size: 12px;
+      text-align: start;
+      padding-left: 2%; }
+      body .container .col-right .inner-right .right-top .top-elm .item-title .item-title-favicon {
+        position: relative;
+        top: 3px;
+        left: 0;
+        padding-right: 6px; }
+    body .container .col-right .inner-right .comment-set-outer {
+      padding-top: 31px; }
+      body .container .col-right .inner-right .comment-set-outer .comment-set-title-outer {
+        height: 20px;
+        background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 100%);
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #cfcfcf; }
+        body .container .col-right .inner-right .comment-set-outer .comment-set-title-outer .comment-set-title {
+          font-size: 13px;
+          color: #777;
+          padding-left: 10px;
+          border-top: 1px solid #fbfbfb; }
+      body .container .col-right .inner-right .comment-set-outer .comment-list .comment {
+        border-top: 1px solid #ccc;
+        padding: 10px 0; }
+        body .container .col-right .inner-right .comment-set-outer .comment-list .comment:first-child {
+          border: none; }
+        body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner {
+          padding: 0 10px; }
+          body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-icon {
+            float: left;
+            width: 32px;
+            height: 32px;
+            padding-top: 2px; }
+          body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group {
+            padding-left: 42px; }
+            body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group .comment-name, body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group .comment-id {
+              font-size: 13px; }
+            body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group .comment-name {
+              display: inline;
+              margin-right: 5px; }
+            body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group .comment-id {
+              color: #777; }
+            body .container .col-right .inner-right .comment-set-outer .comment-list .comment .comment-inner .comment-group .comment-body {
+              font-size: 14px; }
