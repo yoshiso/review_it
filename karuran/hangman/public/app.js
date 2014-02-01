@@ -1,4 +1,6 @@
-'user strict';
+// [review] - よく理解せずにすべて関数リテラルで定義しているけど、本当によいのかの検討
+
+'use strict';
 (function() {
 
   var images = [
